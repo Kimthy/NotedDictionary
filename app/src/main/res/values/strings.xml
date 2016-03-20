@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Noted Dictionary</string>
+    <string name="deleteWord">Are you sure, you want to delete it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="dev">\n- Kimthy (hourkimthy@gmail.com)\n</string>
+    <string name="setTitle">About Developer</string>
+</resources>

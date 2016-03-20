@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_word"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:hint="Your word will display here."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center|left" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageEdit"
+        android:src="@drawable/right"
+        android:layout_alignRight="@id/txtword"
+        android:contextClickable="true"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/txt_definition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+</RelativeLayout>

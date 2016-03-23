@@ -64,7 +64,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
         switch (item.getItemId()){
             case R.id.action_about :
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage(R.string.dev).setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                builder.setMessage(R.string.about).setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int idd) {
                         // User cancelled the dialog
                         dialog.cancel();

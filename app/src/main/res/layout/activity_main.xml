@@ -21,15 +21,18 @@
         android:id="@+id/txtsearch"
         android:drawableLeft="@drawable/search"
         android:drawablePadding="8dp"
-        android:background="@drawable/rounded_edittext"/>
+        android:background="@drawable/rounded_edittext"
+        android:paddingRight="41dp" />
 
     <ImageView
         android:id="@+id/imgClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/clear"
-        android:layout_marginTop="9dp"
-        android:layout_alignRight="@id/txtsearch"/>
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_alignRight="@id/txtsearch" />
 
     <Button
         android:layout_marginTop="5dp"

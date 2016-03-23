@@ -3,6 +3,6 @@
     <string name="deleteWord">Are you sure, you want to delete it?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="dev">\n- Kimthy (hourkimthy@gmail.com)\n</string>
-    <string name="setTitle">About Developer</string>
+    <string name="about">\nThis apps used to help all students in the study of their language recorded key words and meaning of the word.\n\n<b>Copyright 2016 <i>Kimthy</i></b>\n<i>(Hourkimthy@gmail.com)</i></string>
+    <string name="setTitle">About Noted Dictionary <i>v1.0</i></string>
 </resources>

@@ -16,6 +16,8 @@
         android:padding="15dp"
         android:hint="Your word will display here."
         android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="#ff656565"
         android:textStyle="bold"
         android:layout_gravity="center|left" />
 

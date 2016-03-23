@@ -7,8 +7,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -87,7 +85,7 @@ public class Modify extends AppCompatActivity implements View.OnClickListener{
                             }
                         });
                 AlertDialog d = builder.create();
-                d.setTitle("Comf");
+                d.setTitle("Confirmation");
                 d.show();
                 //mycon.deleteDB(id);
                 //gotoHome(); break;
@@ -113,7 +111,7 @@ public class Modify extends AppCompatActivity implements View.OnClickListener{
         switch (item.getItemId()){
             case R.id.action_about :
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage(R.string.dev).setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                builder.setMessage(R.string.about).setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int idd) {
                         // User cancelled the dialog
                         dialog.cancel();

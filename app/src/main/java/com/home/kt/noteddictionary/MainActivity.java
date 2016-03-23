@@ -10,9 +10,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.Html;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -139,6 +137,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
                 searchText = et_search.getText().toString();
+                if(searchText.length()>0) {
+                    imgv.setVisibility(View.VISIBLE);
+                }else {
+                    imgv.setVisibility(View.GONE);
+                }
 
                 Cursor cursor1 = mycon.readDBByWord(searchText);
 
@@ -185,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_about :
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage(R.string.dev).setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                builder.setMessage(R.string.about).setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int idd) {
                         // User cancelled the dialog
                         dialog.cancel();

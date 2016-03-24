@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/myblue"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -8,7 +9,17 @@
     <ImageView
         android:id="@+id/splashscreen"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:src="@drawable/logo"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:textSize="20sp"
+        android:id="@+id/textView"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/primary_text_dark"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

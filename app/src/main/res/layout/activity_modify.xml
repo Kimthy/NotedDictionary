@@ -1,85 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="top"
+    android:gravity="top|fill_horizontal"
     android:background="@color/myblue"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp">
     <TextView
-        android:textSize="25sp"
-        android:textColor="@android:color/holo_orange_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginTop="20dp"
         android:textStyle="italic|bold"
-        android:text="Word(s):"/>
+        android:text="@string/modify_word"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtword"
-        android:hint="Enter your word here."
+        android:hint="@string/modify_definition"
         android:textSize="25sp"
-        android:background="@color/darkPrimary" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp">
+        android:background="@drawable/edittext_style" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:textStyle="italic|bold"
         android:id="@+id/textview_definition"
         android:textSize="20sp"
         android:textColor="@android:color/holo_blue_bright"
-        android:text="Definition(s):" />
+        android:text="@string/modify_edit_word" />
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/txtdefinition"
         android:inputType="textMultiLine"
         android:textSize="20sp"
-        android:background="@color/darkPrimary"
-        android:hint="Enter your definition here."/>
-    </LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/edittext_style"
+        android:hint="@string/modify_edit_definition"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center|clip_horizontal"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"
-            android:background="@drawable/roundedbutton"
+            android:text="@string/btn_edit"
+            android:background="@drawable/button_background"
             android:id="@+id/btnedit" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
+            android:text="@string/btn_update"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/roundedbutton"
+            android:background="@drawable/button_background"
             android:id="@+id/btndelete"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/roundedbutton"
-            android:text="Back"
+            android:background="@drawable/button_background"
+            android:text="@string/btn_cancel"
             android:id="@+id/btnback"/>
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>

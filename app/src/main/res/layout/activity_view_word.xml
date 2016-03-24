@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="top"
+    android:gravity="top|fill_horizontal"
     android:background="@color/myblue"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin">
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20sp">
-
+        android:layout_marginTop="20dp" >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,20 +25,22 @@
             android:textSize="25sp"
             android:textStyle="italic|bold"
             android:textColor="@android:color/holo_orange_dark"
-            android:text="Word(s):" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:text="@string/view_word" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+            android:paddingRight="45dp"
             android:inputType="textMultiLine"
             android:layout_centerInParent="true"
-            android:background="@color/darkPrimary"
-            android:hint="Your word"
+            android:layout_below="@id/textview_word"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="10dp"
+            android:background="@android:color/holo_orange_dark"
+            android:hint="@string/view__word"
             android:id="@+id/txtword" />
 
         <ImageView
@@ -43,39 +48,33 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
             android:src="@drawable/uk"
+            android:layout_below="@id/textview_word"
             android:layout_alignRight="@id/txtword"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:contextClickable="true"
-            android:padding="12dp"
             android:layout_alignParentRight="true"/>
-        </RelativeLayout>
+    </RelativeLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:orientation="vertical">
+        android:layout_marginTop="20dp"
+        android:textStyle="italic|bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:text="@string/view_definition" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="italic|bold"
-            android:id="@+id/textview_definition"
-            android:textSize="20sp"
-            android:textColor="@android:color/holo_blue_bright"
-            android:text="Definition(s):" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:inputType="textMultiLine"
-            android:textStyle="italic"
-            android:background="@color/darkPrimary"
-            android:hint="Your definition"
-            android:gravity="center"
-            android:id="@+id/txtdefinition" />
-
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        android:background="@android:color/holo_blue_bright"
+        android:hint="@string/view__definition"
+        android:padding="10dp"
+        android:id="@+id/txtdefinition" />
 </LinearLayout>
+</ScrollView>

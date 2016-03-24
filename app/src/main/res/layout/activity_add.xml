@@ -1,68 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="top"
+    android:gravity="top|fill_horizontal"
     android:background="@color/myblue"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:weightSum="1">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:orientation="vertical">
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@android:color/holo_orange_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="italic|bold"
-            android:text="Word(s):"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtword"
-            android:hint="Enter your word here."
-            android:textSize="25sp"
-            android:background="@color/darkPrimary">
-        <requestFocus/>
-    </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+    android:paddingRight="@dimen/activity_horizontal_margin">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_orange_dark"
         android:textStyle="italic|bold"
-        android:id="@+id/textview_definition"
-        android:textSize="20sp"
-        android:textColor="@android:color/holo_blue_bright"
-        android:text="Definition(s):" />
-
+        android:text="@string/add_word"/>
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/txtdefinition"
-        android:inputType="textMultiLine"
-        android:textSize="20sp"
-        android:background="@color/darkPrimary"
-        android:hint="Enter your definition here." />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:id="@+id/txtword"
+        android:hint="@string/edit_add"
+        android:textSize="25sp"
+        android:ellipsize="start"
+        android:background="@drawable/edittext_style">
+        <requestFocus/>
+    </EditText>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textStyle="italic|bold"
+        android:text="@string/add_definition" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtdefinition"
+        android:hint="@string/edit_definition"
+        android:textSize="20sp"
+        android:ellipsize="start"
+        android:background="@drawable/edittext_style" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="center|clip_horizontal"
         android:layout_marginTop="20dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin">
@@ -70,17 +63,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Save"
+            android:text="@string/btn_save"
             android:layout_marginRight="20dp"
-            android:background="@drawable/roundedbutton"
+            android:background="@drawable/button_background"
             android:id="@+id/btnsave" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:background="@drawable/roundedbutton"
+            android:text="@string/btn_back"
+            android:background="@drawable/button_background"
             android:id="@+id/btnback"/>
     </LinearLayout>
-
 </LinearLayout>
+</ScrollView>

@@ -5,4 +5,25 @@
     <string name="no">No</string>
     <string name="about">\nThis apps used to help all students in the study of their language recorded key words and meaning of the word.\n\n<b>Copyright 2016 <i>Kimthy</i></b>\n<i>(Hourkimthy@gmail.com)</i></string>
     <string name="setTitle">About Noted Dictionary <i>v1.0</i></string>
+    <string name="version">V 1.0</string>
+    <string name="add_word">Word(s):</string>
+    <string name="edit_add">Enter your word here.</string>
+    <string name="add_definition">Definition(s):</string>
+    <string name="edit_definition">Enter your definition here.</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_back">Cancel</string>
+    <string name="edit_search">Search your word here.</string>
+    <string name="btn_add">Add Your New Word</string>
+    <string name="modify_word">Word(s):</string>
+    <string name="modify_definition">Enter your word here.</string>
+    <string name="modify_edit_word">Definition(s):</string>
+    <string name="modify_edit_definition">Enter your definition here.</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_update">Delete</string>
+    <string name="btn_cancel">Back</string>
+    <string name="list_word">Your word will display here.</string>
+    <string name="view_word">Word(s):</string>
+    <string name="view__word">Your word</string>
+    <string name="view_definition">Definition(s):</string>
+    <string name="view__definition">Your definition</string>
 </resources>
